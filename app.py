@@ -106,16 +106,10 @@ if submitted:
 st.markdown("---")
 st.markdown("## 💬 Share Feedback")
 
-if "clear_feedback" not in st.session_state:
-    st.session_state.clear_feedback = False
-
-
 with st.form("feedback_form"):
-    default_text = "" if st.session_state.clear_feedback else st.session_state.get("feedback_text", "")
-    feedback_text = st.text_area("🙏 How was your experience using MindScan?", height=100, key="feedback_text", value=default_text)
+    feedback_text = st.text_area("🙏 How was your experience using MindScan?", height=100)
     rating = st.slider("⭐ Rate this app:", 1, 5, 3)
     fb_submit = st.form_submit_button("📩 Submit Feedback")
-
 
 if fb_submit:
     if feedback_text.strip():
@@ -128,10 +122,6 @@ if fb_submit:
             feedback_data.to_csv("feedback.csv", index=False)
 
         st.success("✅ Thanks for your feedback!")
-
-        # 🧹 Set flag to clear input and rerun
-        st.session_state.clear_feedback = True
-        st.experimental_rerun()
-
+        st.rerun()
     else:
         st.warning("Please enter some feedback before submitting.")

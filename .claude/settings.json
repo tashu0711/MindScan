@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"C:\\\\Program Files\\\\Python313\\\\python.exe\" -c \"import pandas as pd; df=pd.read_csv\\(r''d:\\\\drone-arena\\\\New folder\\\\MindScan\\\\data\\\\cleaned_data.csv''\\); print\\(df.columns.tolist\\(\\)\\); print\\(df.shape\\); print\\(df.head\\(3\\)\\)\")"
+    ]
+  }
+}

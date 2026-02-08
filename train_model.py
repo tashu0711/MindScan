@@ -9,7 +9,7 @@ import pickle
 df = pd.read_csv('data/cleaned_data.csv')
 
 
-df = df.dropna(subset=['text'])  # ⬅️ Fix NaN issue
+df = df.dropna(subset=['text'])
 # Step 2: Set features and labels
 X = df['text']
 y = df['target']
@@ -27,10 +27,10 @@ model.fit(X_train, y_train)
 
 # Step 6: Evaluate the model
 y_pred = model.predict(X_test)
-print("\n🔍 Classification Report:\n")
+print("\nClassification Report:\n")
 print(classification_report(y_test, y_pred))
 
-print("📊 Confusion Matrix:")
+print("Confusion Matrix:")
 print(confusion_matrix(y_test, y_pred))
 
 # Step 7: Save the model and vectorizer
@@ -40,5 +40,5 @@ with open('model.pkl', 'wb') as f:
 with open('vectorizer.pkl', 'wb') as f:
     pickle.dump(vectorizer, f)
 
-print("\n✅ Model training complete! Files saved as 'model.pkl' and 'vectorizer.pkl'")
+print("\nModel training complete! Files saved as 'model.pkl' and 'vectorizer.pkl'")
 print("NaN in text column:", df['text'].isnull().sum())

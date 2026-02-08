@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where:*)",
+      "Bash(certutil -encodehex \"d:\\\\drone-arena\\\\New folder\\\\MindScan\\\\requirement.txt\" CON 4)",
+      "Bash(\"C:\\\\Program Files\\\\Python313\\\\python.exe\" --version)",
+      "Bash(\"C:\\\\Program Files\\\\Python313\\\\python.exe\" -c \"open\\(r''d:\\\\drone-arena\\\\New folder\\\\MindScan\\\\requirement.txt'',''rb''\\).read\\(\\)[:200]\")",
+      "Bash(\"C:\\\\Program Files\\\\Python313\\\\python.exe\" -c \"print\\(repr\\(open\\(r''d:\\\\drone-arena\\\\New folder\\\\MindScan\\\\requirement.txt'',''rb''\\).read\\(\\)\\)\\)\")",
+      "Bash(\"C:\\\\Program Files\\\\Python313\\\\python.exe\" -m pip install pytz --quiet)",
+      "Bash(\"C:\\\\Program Files\\\\Python313\\\\python.exe\" -m pip install:*)",
+      "Bash(\"C:\\\\Program Files\\\\Python313\\\\python.exe\" -c \"import ast; ast.parse\\(open\\(''app.py'', encoding=''utf-8''\\).read\\(\\)\\); print\\(''app.py: Syntax OK''\\)\")",
+      "Bash(\"C:\\\\Program Files\\\\Python313\\\\python.exe\" -c:*)",
+      "Bash(\"C:\\\\Program Files\\\\Python313\\\\python.exe\" train_model.py)",
+      "Bash(git -C \"d:\\\\drone-arena\\\\New folder\\\\MindScan\" ls-files:*)"
+    ]
+  }
+}
